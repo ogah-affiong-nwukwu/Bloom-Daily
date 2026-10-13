@@ -1,0 +1,95 @@
+.flow {
+  padding: 2.5rem 0 6rem;
+}
+
+.shell {
+  max-width: 640px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.back {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--ink-soft);
+  font-size: 1.19rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: var(--green-deep);
+}
+
+.counter {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.progress {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+.headline {
+  margin: 0 0 1.8rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.7rem, 5vw, 3.92rem);
+  line-height: 1.1;
+  color: var(--green-deep);
+}
+
+.stage {
+  margin-bottom: 2rem;
+}
+
+.error {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  background: var(--blush-soft);
+  color: var(--blush-deep);
+  font-size: 1.15rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .headline {
+    font-size: clamp(2.43rem, 9vw, 3rem);
+  }
+
+  .nav button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .shell {
+    padding-inline: 1.1rem;
+  }
+}

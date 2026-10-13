@@ -1,0 +1,46 @@
+.greeting {
+  margin: 0 0 1.6rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.89rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.badge {
+  padding: 1.1rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.badgeLabel {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.97rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+}
+
+.badgeValue {
+  font-family: var(--font-display);
+  font-size: 1.62rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+@media screen and (max-width: 480px) {
+  .badges {
+    grid-template-columns: 1fr;
+  }
+}

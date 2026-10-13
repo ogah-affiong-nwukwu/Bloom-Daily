@@ -1,0 +1,37 @@
+.refrain {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.statement {
+  margin: 1.5rem auto;
+  max-width: 32rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.43rem, 5.4vw, 3.51rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.divider {
+  width: 56px;
+  height: 1px;
+  margin-inline: auto;
+  background: var(--blush);
+}
+
+@media screen and (max-width: 1140px) {
+  .refrain {
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .refrain {
+    padding: 2.2rem 0;
+  }
+
+  .statement {
+    margin: 1.1rem auto;
+  }
+}

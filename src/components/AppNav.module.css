@@ -1,0 +1,276 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-block: 0.8rem;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--green-deep);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brandName em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.capsule {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.capsule::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.19rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab:hover {
+  color: var(--green-deep);
+}
+
+.tab.isActive {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.tab svg {
+  width: 19px;
+  height: 19px;
+}
+
+.actions {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.profileGroup {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.avatar {
+  width: 2.7rem;
+  height: 2.7rem;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--green);
+  color: var(--btn-text);
+  font-weight: 700;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.avatar:hover {
+  transform: scale(1.04);
+}
+
+.profilePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1.19rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.profilePill:hover {
+  border-color: var(--green);
+}
+
+.profilePill svg {
+  width: 15px;
+  height: 15px;
+  color: var(--ink-soft);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: 50%;
+  background: #7BB661;
+  box-shadow: 0 0 0 3px rgba(123, 182, 97, 0.22);
+}
+
+.profileName {
+  color: var(--green-deep);
+}
+
+.profileLabel {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 60;
+  width: 220px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.menuName {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+
+.menuEmail {
+  margin: 0 0 0.8rem;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.menuBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.menuBtn:hover {
+  color: var(--blush-deep);
+  border-color: var(--blush);
+}
+
+.menuBtn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.themeToggle {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+.themeToggle .iconSun {
+  display: none;
+}
+
+:global(html.dark-theme) .themeToggle .iconSun {
+  display: block;
+}
+
+:global(html.dark-theme) .themeToggle .iconMoon {
+  display: none;
+}
+
+@media screen and (max-width: 1140px) {
+  .brandName {
+    display: none;
+  }
+
+  .tab span {
+    display: none;
+  }
+
+  .tab {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .profileLabel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    gap: 0.6rem;
+  }
+
+  .tab {
+    padding: 0.45rem 0.6rem;
+  }
+
+  .tab svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .themeToggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .profileName {
+    display: none;
+  }
+
+  .profilePill {
+    padding: 0.45rem 0.6rem;
+  }
+}

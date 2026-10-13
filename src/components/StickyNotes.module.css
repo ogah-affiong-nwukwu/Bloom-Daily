@@ -1,0 +1,125 @@
+.notes {
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.03rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.1rem 1.15rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 20px rgba(45, 59, 50, 0.10);
+  transition: background-color 0.3s ease;
+}
+
+.yellow {
+  background: var(--tag-yellow);
+}
+
+.pink {
+  background: var(--tag-peach);
+}
+
+.mint {
+  background: var(--sage);
+}
+
+.pin {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.65rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--blush-deep);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+.noteLabel {
+  font-size: 0.97rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.noteInput {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  resize: vertical;
+  font: inherit;
+  font-family: var(--font-hand);
+  font-size: 2.3rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.noteInput::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.6;
+}
+
+.noteInput:focus {
+  outline: none;
+}
+
+.noteFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.shareBtn {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.shareBtn:hover {
+  color: var(--green-deep);
+  border-color: var(--green);
+}
+
+.shareBtn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.signature {
+  font-family: var(--font-hand);
+  font-size: 1.62rem;
+  color: var(--ink-soft);
+}
+
+@media screen and (max-width: 480px) {
+  .noteInput {
+    font-size: 2.03rem;
+  }
+}

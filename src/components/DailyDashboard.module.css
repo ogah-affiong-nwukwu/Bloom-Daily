@@ -1,0 +1,37 @@
+.dashboard {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.greeting {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.7rem, 5vw, 3.92rem);
+  line-height: 1.1;
+  color: var(--green-deep);
+}
+
+.sub {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.28rem;
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard {
+    gap: 1.2rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}

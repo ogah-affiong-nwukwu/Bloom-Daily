@@ -1,0 +1,245 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  text-align: left;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-size: 1.11rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.field input {
+  width: 100%;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.28rem;
+  transition: border-color 0.2s, background-color 0.3s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.passwordWrap {
+  position: relative;
+}
+
+.passwordWrap input {
+  padding-right: 3rem;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.passwordToggle:hover {
+  color: var(--green-deep);
+}
+
+.passwordToggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hint {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  text-align: left;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.option:hover {
+  border-color: var(--green);
+}
+
+.option.isActive {
+  border-color: var(--green);
+  background: var(--green-soft);
+  box-shadow: var(--shadow);
+}
+
+.optionTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.optionDesc {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.counter {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.skip {
+  display: block;
+  margin: 1.2rem auto 0;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--green-deep);
+  font-size: 1.19rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.skip:hover {
+  text-decoration: underline;
+}
+
+.sectionLabel {
+  margin: 1.6rem 0 0.8rem;
+  font-size: 1.11rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  text-align: left;
+}
+
+.choiceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.95rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.28rem;
+  font-weight: 600;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.choice:hover {
+  border-color: var(--green);
+}
+
+.choice.isActive {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+.radio {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: grid;
+  place-items: center;
+}
+
+.radio::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.choice.isActive .radio {
+  border-color: var(--green);
+}
+
+.choice.isActive .radio::after {
+  background: var(--green);
+}
+
+.segment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.segmentBtn {
+  padding: 0.55rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 1.19rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.segmentBtn:hover {
+  color: var(--green-deep);
+  border-color: var(--green);
+}
+
+.segmentBtn.isActive {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+@media screen and (max-width: 480px) {
+  .optionGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .optionGrid {
+    gap: 0.6rem;
+  }
+}

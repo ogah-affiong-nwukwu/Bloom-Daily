@@ -1,0 +1,314 @@
+.growth {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.header {
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.7rem, 5vw, 3.92rem);
+  line-height: 1.1;
+  color: var(--green-deep);
+}
+
+.intro {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.28rem;
+  line-height: 1.7;
+}
+
+.explainerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.explainerItem {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.explainerTitle {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  font-size: 1.28rem;
+  color: var(--green-deep);
+}
+
+.explainerItem p {
+  margin: 0;
+  font-size: 1.24rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.milestoneHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.milestoneHead .cardTitle {
+  margin-bottom: 0;
+}
+
+.progressLabel {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blush-deep);
+}
+
+.progressBar {
+  height: 6px;
+  margin: 1.1rem 0 1.2rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+.milestoneList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.milestone {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.milestone.isDone {
+  background: var(--green-soft);
+  border-color: var(--green);
+}
+
+.milestoneToggle {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.95rem 1.05rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.checkbox {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.15rem;
+  border: 2px solid var(--border);
+  border-radius: 7px;
+  color: var(--btn-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.milestone.isDone .checkbox {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.milestoneBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.milestoneTitle {
+  font-weight: 700;
+  font-size: 1.28rem;
+  color: var(--ink);
+}
+
+.milestoneDesc {
+  font-size: 1.24rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.03rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.areaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.areaName {
+  font-family: var(--font-display);
+  font-size: 1.62rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.areaStatus {
+  align-self: flex-start;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timelineHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: inline-flex;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+}
+
+.filter {
+  padding: 0.4rem 0.95rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter.isActive {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.empty {
+  margin: 0;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 1.24rem;
+}
+
+.timelineList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.timelineItem {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.timelineBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1.05rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.timelineKind {
+  flex: none;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.timelineTitle {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1.28rem;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timelineDate {
+  flex: none;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.timelineDetail {
+  margin: 0;
+  padding: 0 1.05rem 1rem;
+  font-size: 1.24rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media screen and (max-width: 480px) {
+  .timelineDate {
+    display: none;
+  }
+}

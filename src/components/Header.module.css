@@ -1,0 +1,135 @@
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-block: 1.1rem;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--green-deep);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brandName em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.themeToggle {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.themeToggle .iconSun {
+  display: none;
+}
+
+:global(html.dark-theme) .themeToggle .iconSun {
+  display: block;
+}
+
+:global(html.dark-theme) .themeToggle .iconMoon {
+  display: none;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.85rem 0.3rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.userAvatar {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--btn-text);
+  display: grid;
+  place-items: center;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.headerCta {
+  padding: 0.6rem 1.1rem;
+  font-size: 1.19rem;
+}
+
+.headerLink {
+  border: 0;
+  background: none;
+  padding: 0.35rem 0.25rem;
+  color: var(--green-deep);
+  font-weight: 600;
+  font-size: 1.22rem;
+  cursor: pointer;
+}
+
+.headerLink:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .userName {
+    display: none;
+  }
+
+  .userChip {
+    padding: 0.3rem 0.35rem;
+  }
+
+  .headerLink {
+    display: none;
+  }
+
+  .headerCta {
+    padding: 0.55rem 0.9rem;
+    font-size: 1.11rem;
+  }
+
+  .brandName {
+    font-size: 1.62rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .siteHeader {
+    padding-block: 0.9rem;
+  }
+}

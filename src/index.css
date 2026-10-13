@@ -1,0 +1,157 @@
+:root {
+  --bg: #FBF9F5;
+  --bg-soft: #F4EFE6;
+  --surface: #FFFFFF;
+  --ink: #2A2A2A;
+  --ink-soft: #6B665C;
+  --green-deep: #2D3B32;
+  --green: #3A4D3F;
+  --green-soft: #D8E2DC;
+  --sage: #C2D3C6;
+  --blush: #D1A19A;
+  --blush-soft: #F6E3DE;
+  --blush-deep: #B08077;
+  --border: #EAE3D6;
+  --shadow: 0 12px 32px rgba(45, 59, 50, 0.10);
+  --btn-bg: #2D3B32;
+  --btn-hover: #3A4D3F;
+  --btn-text: #FBF9F2;
+  --highlight-bg: #D1A19A;
+  --highlight-ink: #2A2A2A;
+  --tag-peach: #F6DFC8;
+  --tag-yellow: #F7EDCB;
+  --tag-lavender: #E7E3F3;
+  --rose: #F3D6CE;
+  --sky: #D6E6EE;
+  --radius: 20px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-hand: 'Caveat', 'Segoe Script', cursive;
+}
+
+html.dark-theme {
+  --bg: #141613;
+  --bg-soft: #1D211C;
+  --surface: #22261F;
+  --ink: #F2EEE4;
+  --ink-soft: #A8AA9E;
+  --green-deep: #B4C6B8;
+  --green: #93A996;
+  --green-soft: #2B352C;
+  --sage: #3A4A3E;
+  --blush: #C08F88;
+  --blush-soft: #3A2B27;
+  --blush-deep: #D9ACA6;
+  --border: #30362E;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.38);
+  --btn-bg: #3A4D3F;
+  --btn-hover: #4A614F;
+  --btn-text: #F4F1E7;
+  --highlight-bg: #6E4A45;
+  --highlight-ink: #F6E3DE;
+  --tag-peach: #4A3A2E;
+  --tag-yellow: #4A4428;
+  --tag-lavender: #3B3650;
+  --rose: #4A3530;
+  --sky: #2F3A40;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 76.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 135%;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(560px 560px at 88% -6%, rgba(209, 161, 154, 0.32), transparent 62%),
+    radial-gradient(520px 520px at 108% 42%, rgba(194, 211, 198, 0.35), transparent 60%),
+    radial-gradient(640px 640px at -10% 60%, rgba(214, 230, 238, 0.4), transparent 62%),
+    radial-gradient(680px 680px at -8% 104%, rgba(45, 59, 50, 0.12), transparent 62%);
+}
+
+html.dark-theme body::before {
+  background:
+    radial-gradient(560px 560px at 88% -6%, rgba(192, 143, 136, 0.12), transparent 62%),
+    radial-gradient(520px 520px at 108% 42%, rgba(58, 74, 62, 0.16), transparent 60%),
+    radial-gradient(640px 640px at -10% 60%, rgba(47, 58, 64, 0.18), transparent 62%),
+    radial-gradient(680px 680px at -8% 104%, rgba(148, 167, 140, 0.10), transparent 62%);
+}
+
+svg {
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(61, 107, 82, 0.45);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+::selection {
+  background: var(--blush-soft);
+  color: var(--ink);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,50 @@
+.pills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.19rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pill:hover {
+  color: var(--green-deep);
+  border-color: var(--green);
+}
+
+.pill.isActive {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.emoji {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .pill {
+    padding: 0.45rem 0.9rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .pills {
+    gap: 0.5rem;
+  }
+}

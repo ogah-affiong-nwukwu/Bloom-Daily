@@ -1,0 +1,149 @@
+.hero {
+  padding: 3.5rem 0 4.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.title {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3.51rem, 8.1vw, 5.94rem);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  color: var(--green-deep);
+}
+
+.lede {
+  margin: 0 0 1.6rem;
+  max-width: 30rem;
+  color: var(--ink-soft);
+  font-size: clamp(1.32rem, 2.16vw, 1.42rem);
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.signin {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--ink-soft);
+  font-size: 1.22rem;
+  cursor: pointer;
+}
+
+.signin strong {
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+.signin:hover strong {
+  text-decoration: underline;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: min(330px, 100%);
+  padding: 2rem 1.9rem 1.7rem;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transform: rotate(2deg);
+  animation: heroFloat 7s ease-in-out infinite;
+}
+
+.orb {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #F8E6D4, var(--blush) 62%, rgba(209, 161, 154, 0.25) 100%);
+}
+
+.tag {
+  margin: 0 0 0.4rem;
+  color: var(--blush-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-display);
+  font-size: 2.03rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.cardQuote {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.46rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.time {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: rotate(2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-8px);
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .copy {
+    text-align: center;
+  }
+
+  .lede {
+    margin-inline: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .card {
+    width: min(280px, 100%);
+  }
+}

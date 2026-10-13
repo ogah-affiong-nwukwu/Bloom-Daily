@@ -1,0 +1,207 @@
+.profile {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.7rem, 5vw, 3.92rem);
+  line-height: 1.1;
+  color: var(--green-deep);
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 0.3rem;
+  padding: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  overflow-x: auto;
+  scrollbar-width: none;
+  justify-self: start;
+  max-width: 100%;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: none;
+  padding: 0.5rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.19rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab.isActive {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.panel {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.nameRow {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.nameInput {
+  flex: 1 1 16rem;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.28rem;
+  transition: border-color 0.2s;
+}
+
+.nameInput:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.pillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.pill {
+  padding: 0.5rem 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.19rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pill:hover {
+  color: var(--green-deep);
+  border-color: var(--green);
+}
+
+.pill.isActive {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.voiceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.voice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-soft);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.voice:hover {
+  border-color: var(--green);
+}
+
+.voice.isActive {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+.voiceName {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--green-deep);
+}
+
+.voiceDesc {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.voicePreview {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.51rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.copy {
+  margin: 0 0 1rem;
+  font-size: 1.24rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.danger {
+  color: var(--blush-deep);
+  border-color: var(--blush);
+}
+
+.danger:hover {
+  color: var(--blush-deep);
+  border-color: var(--blush-deep);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-size: 1.24rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.list li::before {
+  content: '·';
+  position: absolute;
+  left: 0.35rem;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  color: var(--blush-deep);
+}
+
+@media screen and (max-width: 480px) {
+  .nameInput {
+    flex: 1 1 100%;
+  }
+
+  .nameRow button {
+    width: 100%;
+  }
+}

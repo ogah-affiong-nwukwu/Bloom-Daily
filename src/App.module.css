@@ -1,0 +1,19 @@
+.footer {
+  padding: 2.6rem 1.25rem 3rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.view {
+  display: none;
+  padding-block: 2rem 5rem;
+}
+
+.view.isActive {
+  display: block;
+}
